@@ -52,6 +52,7 @@ public class MyCanvas extends Canvas {
     }
 
     public void paint2(Graphics g) {
+        g.drawLine((int)(_mousehandler.MouseX + radius/2), (int)(_mousehandler.MouseY+radius/2), (int)(_mousehandler.MouseX2+radius/2), (int)(_mousehandler.MouseY2+radius/2));
         g.drawString("Distanz: "  + calculateDistance(), _mousehandler.MouseX+20, _mousehandler.MouseY+20);
     }
 

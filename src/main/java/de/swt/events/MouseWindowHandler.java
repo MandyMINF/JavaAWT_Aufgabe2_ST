@@ -22,6 +22,12 @@ public class MouseWindowHandler extends MouseAdapter {
             if(counter < 2) {
                 canvas.paint(canvas.getGraphics());
                 counter++;
+                if (counter==1){
+                    MouseX2 = evt.getX();
+                    MouseY2 = evt.getY();
+                    canvas.paint(canvas.getGraphics());
+                    System.out.println(MouseX2);
+                }
                 if (counter==2){
                     canvas.paint2(canvas.getGraphics());
                 }
