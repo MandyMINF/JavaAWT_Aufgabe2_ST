@@ -9,6 +9,8 @@ import java.awt.geom.Rectangle2D;
 public class MyCanvas extends Canvas {
     //attributes
     private final MouseWindowHandler _mousehandler = new MouseWindowHandler();
+    public boolean isset = false;
+    public float radius;
 
     /**
      * Constructor of the class MyCanvas.
@@ -24,17 +26,22 @@ public class MyCanvas extends Canvas {
         getGraphics().clearRect(0,0,500,300);
     }
 
+    public void setRadius (float radius) {
+        this.radius = radius;
+        isset = true;
+    }
     /**
      * paint()-Method used to paint circles on the canvas.
      * @param g
      */
+
     @Override
     public void paint(Graphics g) {
 
         Ellipse2D ellipse;
         ellipse = new Ellipse2D.Float(
                 _mousehandler.MouseX, _mousehandler.MouseY, //Koordinaten
-                10.0F, 10.0F); //Size
+                radius, radius); //Size
         Graphics2D g2d = (Graphics2D)g;
         if (_mousehandler.startProgram) {
             g2d.draw(ellipse);
