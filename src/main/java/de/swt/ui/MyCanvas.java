@@ -31,13 +31,13 @@ public class MyCanvas extends Canvas {
     @Override
     public void paint(Graphics g) {
 
-        Ellipse2D ellipse;
-        ellipse = new Ellipse2D.Float(
+        Rectangle2D rectangle;
+        rectangle = new Rectangle2D.Float(
                 _mousehandler.MouseX, _mousehandler.MouseY, //Koordinaten
                 10.0F, 10.0F); //Size
         Graphics2D g2d = (Graphics2D)g;
         if (_mousehandler.startProgram) {
-            g2d.draw(ellipse);
+            g2d.draw(rectangle);
         }
     }
 
