@@ -37,7 +37,9 @@ public class MyCanvas extends Canvas {
 
     @Override
     public void paint(Graphics g) {
-
+        if(!isset) {
+            radius = 10.0F;
+        }
         Ellipse2D ellipse;
         ellipse = new Ellipse2D.Float(
                 _mousehandler.MouseX, _mousehandler.MouseY, //Koordinaten
@@ -49,4 +51,11 @@ public class MyCanvas extends Canvas {
         }
     }
 
+    public void paint2(Graphics g) {
+        g.drawString("Distanz: "  + calculateDistance(), _mousehandler.MouseX+20, _mousehandler.MouseY+20);
+    }
+
+    private double calculateDistance () {
+        return Math.sqrt((Math.pow(_mousehandler.MouseX2-_mousehandler.MouseX, 2))+(Math.pow(_mousehandler.MouseY2-_mousehandler.MouseY, 2)));
+    }
 }
