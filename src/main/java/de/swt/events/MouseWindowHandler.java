@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 
 public class MouseWindowHandler extends MouseAdapter {
 
-    public int MouseX, MouseY;
+    public int MouseX, MouseY, MouseX2, MouseY2;
     private int counter = 0;
     public boolean startProgram = false;
 

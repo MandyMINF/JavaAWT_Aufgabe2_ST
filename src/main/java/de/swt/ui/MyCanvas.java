@@ -38,6 +38,7 @@ public class MyCanvas extends Canvas {
         Graphics2D g2d = (Graphics2D)g;
         if (_mousehandler.startProgram) {
             g2d.draw(ellipse);
+            g2d.drawString("Koordinate: " + _mousehandler.MouseX + "," + _mousehandler.MouseY,_mousehandler.MouseX,_mousehandler.MouseY);
         }
     }
 
