@@ -13,7 +13,7 @@ public class MainWindow extends Frame {
 
         public MainWindow(){
             setSize(500,300);
-            setTitle("Metrik Version 1.2.2");
+            setTitle("Metrik Version 1.3");
 
             mymenu = new MyMenu(this);
             add(canvas);
