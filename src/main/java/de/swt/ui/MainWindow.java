@@ -7,9 +7,13 @@ import java.awt.*;
 
 public class MainWindow extends Frame {
 
+        MyCanvas canvas = new MyCanvas();
+
         public MainWindow(){
             setSize(500,300);
-            setTitle("AWT DEMO");
+            setTitle("Metrik Version 1.0");
+
+            add(canvas);
         }
 
 
